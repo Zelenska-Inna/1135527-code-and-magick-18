@@ -185,13 +185,14 @@
   var fireballSize = 22;
   var wizardSpeed = 3;
   var wizardWidth = 70;
+  var MULTIPLIER_HEIGHT = 1.337; 
 
   function getFireballSpeed(left) {
      return left ? 5 : 2;
    };
 
   function getWizardHeight() {
-    return 1.337 * wizardWidth;
+    return MULTIPLIER_HEIGHT * wizardWidth;
   };
 
   function getWizardX(width) {
