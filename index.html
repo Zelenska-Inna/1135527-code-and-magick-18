@@ -182,17 +182,17 @@
 </template>
 
 <script>
+  var WIZARD_PROPORTION = 1.337;
   var fireballSize = 22;
   var wizardSpeed = 3;
   var wizardWidth = 70;
-  var MULTIPLIER_HEIGHT = 1.337; 
-
+  
   function getFireballSpeed(left) {
      return left ? 5 : 2;
    };
 
   function getWizardHeight() {
-    return MULTIPLIER_HEIGHT * wizardWidth;
+    return WIZARD_PROPORTION * wizardWidth;
   };
 
   function getWizardX(width) {
