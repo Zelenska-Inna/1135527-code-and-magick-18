@@ -162,7 +162,7 @@
 
 <footer>
   <p><a href="http://htmlacademy.ru" class="footer-link"><img src="img/htmlacademy-logo.png" alt="HTML Academy"
-                                                              width="130xs">Сделано в HTML Academy</a>в 2017 году</p>
+                                                              width="130">Сделано в HTML Academy</a>в 2017 году</p>
 </footer>
 
 <template id="similar-wizard-template" style="display: none">
@@ -180,28 +180,26 @@
     <p class="setup-similar-label">Петр Петров</p>
   </div>
 </template>
+
 <script>
   var fireballSize = 22;
-  var getFireballSpeed = function (left){
-    if(left==true){
-      return 5;
-    } else { return 2;
-    }
-  };
   var wizardSpeed = 3;
   var wizardWidth = 70;
-  var getWizardHeight = function(){
-    var total = (1.337 * wizardWidth);
-    return total;
+
+  function getFireballSpeed(left) {
+     return left ? 5 : 2;
+   };
+
+  function getWizardHeight() {
+    return 1.337 * wizardWidth;
   };
-  var getWizardX = function(width){
-    var total = (width - wizardWidth)/2;
-     return total;
+
+  function getWizardX(width) {
+    return (width - wizardWidth) / 2;
   };
-  // хотела последнюю функцию написать вот так, но тогда Маг вообще пропадает((( 
-  var getWizardY = function(height){
-  var total = height/3;
-  return total;
+
+  function getWizardY(height) {
+    return height / 3;
   };
 </script>
 <script src="js/game.js"></script>
